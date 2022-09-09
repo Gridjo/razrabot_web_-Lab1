@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>разработка веб</title>
+</head>
+<body>
+<script type="text/javascript">
+	var xn = Number(+prompt("введите начальное значение интервала"));
+	var xk = Number(+prompt("введите конечное значение интервала"));
+	var sh = Number(+prompt("введите шаг"));
+	var E  = Number(+prompt("введите точность Е"));
+	var summ = 0;
+	var f = x => ( (x.toString().includes('.')) ? (x.toString().split('.').pop().length) : (0) );
+	for(let i = xn; i <= xk; i += sh){
+		summ = Math.log(1 - i);
+		console.log(summ.toFixed(f(E)));
+	}
+
+
+</script>
+</body>
+</html>
