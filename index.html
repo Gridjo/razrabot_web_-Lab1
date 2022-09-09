@@ -7,16 +7,13 @@
 </head>
 <body>
 <script type="text/javascript">
-	var xn = Number(prompt("введите начальное значение интервала"));
-	var xk = Number(prompt("введите конечное значение интервала"));
-	var sh = Number(prompt("введите шаг"));
-	var E  = Number(prompt("введите точность Е"));
+	var xn = Number(prompt("введите x"));
+	var n  = Number(prompt("введите N"));
 	var summ = 0;
-	var f = x => ( (x.toString().includes('.')) ? (x.toString().split('.').pop().length) : (0) );
-	for(let i = xn; i <= xk; i += sh){
-		summ = Math.log(1 - i);
-		console.log(summ.toFixed(f(E)));
-	}
+	for(let i = 1; i <= n; i++)
+		summ -= (i**n)/n;
+	console.log(summ.toFixed(4));
+	
 
 
 </script>
