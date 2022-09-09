@@ -7,10 +7,10 @@
 </head>
 <body>
 <script type="text/javascript">
-	var xn = Number(+prompt("введите начальное значение интервала"));
-	var xk = Number(+prompt("введите конечное значение интервала"));
-	var sh = Number(+prompt("введите шаг"));
-	var E  = Number(+prompt("введите точность Е"));
+	var xn = Number(prompt("введите начальное значение интервала"));
+	var xk = Number(prompt("введите конечное значение интервала"));
+	var sh = Number(prompt("введите шаг"));
+	var E  = Number(prompt("введите точность Е"));
 	var summ = 0;
 	var f = x => ( (x.toString().includes('.')) ? (x.toString().split('.').pop().length) : (0) );
 	for(let i = xn; i <= xk; i += sh){
